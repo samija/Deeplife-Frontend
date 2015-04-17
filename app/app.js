@@ -1,4 +1,21 @@
-var app = angular.module('userApp', ['ngRoute', 'ui.bootstrap', 'ngAnimate']);
+(function(module) {
+    module.config(function($routeProvider) {
+        $routeProvider
+            .when("/main", {
+                templateUrl: "main.html",
+                controller: "MainController"
+            })
+            .when("/user/:username", {
+                templateUrl: "user.html",
+                controller: "UserController"
+            })
+            .otherwise({redirectTo: "/main"})
+    });
+
+}(angular.module("githubViewer", ["ngRoute"])));
+
+
+var app = angular.module('githubViewer', ['ngRoute', 'ui.bootstrap', 'ngAnimate']);
 
 app.config(['$routeProvider',
     function($routeProvider) {
@@ -13,11 +30,23 @@ app.config(['$routeProvider',
             templateUrl: 'templates/country.html',
             controller: 'countryCtrl'
         })
+
         when('/', {
             title: 'ethiopia',
             templateUrl: 'templates/country.html',
             controller: 'countryCtrl'
         })
+        when("/main", {
+            templateUrl: "main.html",
+            controller: "MainController"
+                    })
+        when("/user/:username", {
+            templateUrl: "user.html",
+                        controller: "UserController"
+                    })
+
+        }
+    (angular.module("githubViewer", ["ngRoute"])));
         when('/', {
             title: 'djibouti',
             templateUrl: 'templates/country.html',
@@ -120,6 +149,9 @@ app.config(['$routeProvider',
         })
             .otherwise({
                 redirectTo: '/'
-            });;
+            });
     }]);
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
