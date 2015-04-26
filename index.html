@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<<<<<<< Updated upstream
 <html ng-app="githubViewer">
 <head>
     <meta charset="UTF-8">
@@ -25,8 +24,8 @@
     <link rel="stylesheet" href="style.css" />
     <script src="app.js"></script>
     <script src="MainController.js"></script>
-    <script src="UserController.js"></script>
-    <script src="github.js"></script>
+    <script src="app/UserController.js"></script>
+    <script src="app/github.js"></script>
 </head>
 <body class="skin-blue">
 <!-- header logo: style can be found in header.less -->
@@ -36,8 +35,8 @@
     <link rel="stylesheet" href="style.css" />
     <script src="app.js"></script>
     <script src="MainController.js"></script>
-    <script src="UserController.js"></script>
-    <script src="github.js"></script>
+    <script src="app/UserController.js"></script>
+    <script src="app/github.js"></script>
     <a href="index.html" class="logo">
         <!-- Add the class icon to your logo image or logo icon to add the margining -->
         <img class="icon" src="img/deeplife-logo.png"> <title>deeplife</title>
@@ -151,11 +150,7 @@
                                         <i class="fa fa-warning danger"></i> 1234 peopel reached today in your Tree
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-users warning"></i> 78 disciples started multiplying
-                                    </a>
-                                </li>
+
 
                                 <!--<li>-->
                                 <!--<a href="#">-->
@@ -246,14 +241,14 @@
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="glyphicon glyphicon-user"></i>
-                        <span>Samson Usmael <i class="caret"></i></span>
+                        <span>{{}} <i class="caret"></i></span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header bg-light-blue">
                             <img src="img/avatar3.png" class="img-circle" alt="User Image" />
                             <p>
-                                Samson Usmael - Staff at Ethiopia DS
+                                {{user.First_Name}}- Staff at Ethiopia DS
                                 <small>Member since Nov. 2012</small>
                             </p>
                         </li>
@@ -295,7 +290,7 @@
                     <img src="img/avatar3.png" class="img-circle" alt="User Image" />
                 </div>
                 <div class="pull-left info">
-                    <p>Hello, Sami</p>
+                    <p>Hello, {{user.0.First_Name}}</p>
 
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
@@ -416,8 +411,8 @@
 <link rel="stylesheet" href="style.css" />
 <script src="app.js"></script>
 <script src="MainController.js"></script>
-<script src="UserController.js"></script>
-<script src="github.js"></script>
+<script src="app/UserController.js"></script>
+<script src="app/github.js"></script>
 <!-- angular -->
 <script src="js/angular.min.js"></script>
 <script src="js/angular-route.min.js"></script>
@@ -476,8 +471,8 @@
         <link rel="stylesheet" href="style.css" />
         <script src="app.js"></script>
         <script src="MainController.js"></script>
-        <script src="UserController.js"></script>
-        <script src="github.js"></script>
+        <script src="app/UserController.js"></script>
+        <script src="app/github.js"></script>
         <meta charset="UTF-8">
         <title>AdminLTE | Dashboard</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
@@ -769,7 +764,7 @@
                             <img src="img/avatar3.png" class="img-circle" alt="User Image" />
                         </div>
                         <div class="pull-left info">
-                            <p>Hello, {{user.0.First_Name}}/p>
+                            <p>Hello,{{user.0.First_Name}}  </p>
 
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
