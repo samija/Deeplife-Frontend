@@ -5,7 +5,7 @@
   var github = function($http){
     
     var getUser = function(username){
-     return $http.get("http://localhost:81/DeeplifeApi/public/users/" + username)
+     return $http.get("http://192.168.37.112/DeeplifeApi/public/users + username)
            .then(function(response){
              return response.data;
            });
